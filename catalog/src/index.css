@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: #fae6b1;
+    color: #31525b;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+}
+
+.wrapper {
+    font-family: 'Dancing Script', cursive;
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header {
+    position: relative;
+}
+
+header ul.nav {
+    font-size: 50px;
+    text-align: center;
+    bottom: 50px;
+    list-style: none;
+}
+
+header ul.nav li {
+    margin-right: 50px;
+    display: inline;
+    /*margin-left: 25px;*/
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+    color: #ffa101;
+}
+
+header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    font-size: 50px;
+    transition: color, transform 500ms ease;
+
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #ffa101;
+    transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 650px;
+    background: #b3dee5;
+    -webkit-box-shadow: 4px 5px 15px 7px #31525b;
+    box-shadow: 4px 5px 15px 7px #31525b;
+    z-index: 999999;
+    padding: 20px;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    border-radius: 3px;
+}
+
+header .shop-cart .item {
+    width: 100%;
+}
+
+header .shop-cart .item img {
+    width: 85px;
+    float: left;
+    margin-right: 20px;
+}
+
+header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+header .shop-cart .item b {
+    font-size: 30px;
+    color: #31525b;
+    text-shadow: 0px 0px 5px gold;
+}
+
+header .shop-cart .item .delete-icon {
+    color: #31525b;
+    float: right;
+    position: relative;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+
+}
+
+header .shop-cart .item .delete-icon:hover {
+    transform: scale(1.3);
+    color: #ffa101;
+}
+
+header .shop-cart h2 {
+    padding-bottom: 10px;
+}
+
+header .shop-cart .summa {
+    font-weight: 600;
+    text-shadow: 0px 0px 5px gold;
+
+}
+
+header .presentation {
+    margin: 50px 0;
+    z-index: -1;
+    background: url('https://cdn.wallpapersafari.com/59/48/x72Sle.jpg') no-repeat;
+    width: 100%;
+    height: 703px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #fae6b1;
+    position: relative;
+}
+
+header .presentation:after {
+    content: 'Best apps';
+    font-family: 'Honk', system-ui;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 80px;
+    color: white;
+}
+
+header .presentation:before {
+    content: 'Free apps';
+    font-family: 'Honk', system-ui;
+    position: absolute;
+    text-align: right;
+    top: 40px;
+    left: 400px;
+    width: 840px;
+    font-weight: 600;
+    font-size: 80px;
+    color: white;
+}
+.categories div{
+    display: inline-block;
+    background: #ffa101;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 500ms ease;
+}
+.categories div:hover{
+    border-color: #31525b;
+    transform: scale(1.2);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #b3dee5;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover {
+    transform: scale(1.1);
+}
+
+main h2, main p, main b {
+    margin: 10px 20px;
+    color: #333;
+    text-align: center;
+}
+
+main b {
+    font-size: 30px;
+    color: #31525b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ffa101;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+
+}
+
+main .add-to-cart:hover {
+    transform: scale(1.5) translateY(-5px);
+}
+
+footer {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    top: 100px;
+}
