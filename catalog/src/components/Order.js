@@ -6,7 +6,7 @@ class Order extends Component {
         const price = this.props.item.price;
         let priceDisplay;
 
-        if (price === 'Free-to-play') {
+        if (price === 'Free to play') {
             priceDisplay = price;
         } else {
             priceDisplay = `${price}$`;

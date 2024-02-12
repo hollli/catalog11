@@ -56,8 +56,7 @@ class Categories extends Component {
 
     render() {
         return (
-            <div className='categories'>
-                {
+            <div className='categories'>                {
                     this.state.categories.map(el => (
                         <div key={el.key} onClick={(()=>this.props.choseCategory(el.key))}>{el.name}</div>
                     ))

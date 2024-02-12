@@ -4,13 +4,19 @@ import Footer from "./components/Footer";
 import './index.css';
 import Items from "./components/items";
 import Categories from "./components/Categories";
+import ShowFullItem from "./components/ShowFullItem";
+import {BrowserRouter as Router, Routes, Route, Link, Switch} from 'react-router-dom';
+import About from "./components/About";
+import Contacts from "./components/Contacts";
+import Profile from "./components/Profile";
+
 
 class App extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
             orders: [],
-            currentItems: [],
             items: [
                 {
                     id: 1,
@@ -73,7 +79,7 @@ class App extends React.Component {
                     title: 'Call of Duty: Warzone',
                     img: 'https://images.pushsquare.com/df8ea1cce852c/call-of-duty-warzone-cover.cover_large.jpg    ',
                     desc: 'Call of Duty: Warzone is a free-to-play multiplayer battle royale game developed by Infinity Ward and published by Activision. It is a spin-off of the Call of Duty series.',
-                    categories: [ 'FPS', 'Shooter', 'Free to Play'],
+                    categories: ['FPS', 'Shooter', 'Free to Play'],
                     price: 'Free to play'
                 },
                 // {
@@ -92,16 +98,20 @@ class App extends React.Component {
                     categories: ['FPS', 'Shooter', 'Free to Play'],
                     price: 'Free to play'
                 }
-            ]
+            ],
+            currentItems: [],
+            showFullItem: false,
+            fullItem: {}
         }
         this.state.currentItems = this.state.items
         this.addToOrder = this.addToOrder.bind(this)
         this.deleteOrder = this.deleteOrder.bind(this)
         this.chooseCategory = this.chooseCategory.bind(this);
+        this.onShowFull = this.onShowFull.bind(this);
     }
 
     componentDidMount() {
-        this.setState({ currentItems: this.state.items });
+        this.setState({currentItems: this.state.items});
     }
 
     render() {
@@ -109,15 +119,29 @@ class App extends React.Component {
             <div className="wrapper">
                 <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
                 <Categories choseCategory={this.chooseCategory}/>
-                <Items items={this.state.currentItems} onAdd={this.addToOrder}/>
+                <Items onShowFull={this.onShowFull} items={this.state.currentItems} onAdd={this.addToOrder}/>
+                {this.state.showFullItem &&
+                    <ShowFullItem onAdd={this.addToOrder} onShowFull={this.onShowFull} item={this.state.fullItem}/>}
                 <Footer/>
+                <Routes>
+                    <Route path="/" exact component={App} />
+                    <Route path="/About" component={About} />
+                    <Route path="/Contacts" component={Contacts} />
+                    <Route path="/Profile" component={Profile} />
+                </Routes>
             </div>
+
         )
+    }
+
+    onShowFull(item) {
+        this.setState({fullItem: item})
+        this.setState({showFullItem: !this.state.showFullItem})
     }
 
     chooseCategory(category) {
         if (category === 'All') {
-            this.setState({ currentItems: this.state.items });
+            this.setState({currentItems: this.state.items});
             return;
         }
 
@@ -130,7 +154,6 @@ class App extends React.Component {
             currentItems: this.state.items.filter(el => el.categories.includes(category))
         });
     }
-
 
 
     deleteOrder(id) {
