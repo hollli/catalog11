@@ -1,0 +1,21 @@
+/*!*h2{*!*/
+/*!*    font-size: 400px;*!*/
+/*!*}*!*/
+/*!*.about-page-wrapper main, .categories{*!*/
+/*!*    display: none !important;*!*/
+/*!*}*!*/
+/*!*main > :not(main) {*!*/
+/*!*    display: none;*!*/
+/*!*}*!*/
+
+/*header .presentation:after {*/
+/*!*    content: '';*!*/
+/*!*    font-family: 'Honk', system-ui;*!*/
+/*!*    position: absolute;*!*/
+/*!*    top: 40px;*!*/
+/*!*    left: 40px;*!*/
+/*!*    width: 400px;*!*/
+/*!*    font-weight: 600;*!*/
+/*!*    font-size: 80px;*!*/
+/*!*    color: white;*!*/
+/*}*/

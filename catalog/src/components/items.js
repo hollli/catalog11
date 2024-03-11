@@ -1,16 +1,14 @@
-import React, {Component} from 'react';
-import Item from "./item";
+import React from 'react';
+import Item from "./item"; // Поміняв "item" на "Item"
 
-export class Items extends Component {
-    render() {
-        return (
-            <main>
-                {this.props.items.map(el => (
-                    <Item onShowFull={this.props.onShowFull} key={el.id} item={el} onAdd={this.props.onAdd }/>
-                ))}
-            </main>
-        );
-    }
-}
+export const Items = (props) => {
+    return (
+        <main>
+            {props.items && props.items.map(el => (
+                <Item onShowFull={props.onShowFull} key={el.id} item={el} onAdd={props.onAdd} />
+            ))}
+        </main>
+    );
+};
 
 export default Items;

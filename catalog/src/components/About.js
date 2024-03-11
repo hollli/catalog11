@@ -1,36 +1,16 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 
-class About extends Component {
-    render() {
-        return (
-            <div>
+import '../About.css';
 
-                        <span className={'logo'}></span>
-                        <ul className={'nav'}>
-                            <li>
-                                {/*<Link to="/">*/}
-                                Home
-                                {/*</Link>*/}
-                            </li>
-                            <li>
-                                {/*<Link to="/About">*/}
-                                About
-                                {/*</Link>*/}
-                            </li>
-                            <li>
-                                {/*<Link to="/Contacts">*/}
-                                Contacts
-                                {/*</Link>*/}
-                            </li>
-                            <li>
-                                {/*<Link to="/Profile">*/}
-                                Profile
-                                {/*</Link>*/}
-                            </li>
-                        </ul>
-            </div>
-        );
-    }
-}
+const About = () => {
+
+    return (
+        <div>
+
+
+            <div>About</div>
+        </div>
+    );
+};
 
 export default About;
