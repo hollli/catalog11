@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Categories = ({ chooseCategory }) => {
+const Categories = ({chooseCategory}) => {
     const categories = ['All', 'Story Rich', 'RPG', 'Open World', 'Western', 'FPS', 'Shooter', 'Multiplayer', 'Racing', 'Survival', 'Free to Play'];
-
-    return (
+    const [val, setVal] = useState();    return (
         <div className='categories'>
             <ul>
                 {categories.map((category, index) => (

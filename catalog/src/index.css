@@ -12,7 +12,7 @@ a {
 }
 
 body {
-    background: #fae6b1;
+    background: #fae6b1 !important;
     color: #31525b;
     font-family: 'Montserrat', cursive;
     font-weight: 300;
@@ -207,6 +207,7 @@ main, .categories {
     font-size: 80px;
     color: white;
 }
+
 .full-item img,
 main .item img {
     width: 100%;
@@ -214,7 +215,8 @@ main .item img {
     transition: transform 500ms ease;
     cursor: pointer;
 }
-main .item img:hover{
+
+main .item img:hover {
     transform: scale(1.1) !important;
 }
 
@@ -230,6 +232,7 @@ main .item img:hover{
     font-size: 80px;
     color: white;
 }
+
 
 .categories {
     text-align: center;
@@ -262,23 +265,27 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-li{
+
+li {
     list-style: none;
 }
-.news h2{
+
+.news h2 {
     text-align: center;
 }
-.news li{
+
+.news li {
     width: 45%;
     padding: 20px;
     margin-right: auto;
     margin-left: auto;
 }
+
 .news li {
     padding: 1rem;
     margin-bottom: 10px;
-    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
-    0 5px 15px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
     border-radius: 0.5rem;
 
@@ -292,7 +299,7 @@ li{
     border-left: 0.5rem solid #00ff99;
 }
 
-.news li> :first-child {
+.news li > :first-child {
     margin-top: 0;
 }
 
@@ -300,11 +307,12 @@ li{
     margin-bottom: 0;
 }
 
-.news{
-    margin-bottom: 50px ;
+.news {
+    margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
 }
+
 .full-item > div {
     width: 500px;
     position: relative;
@@ -340,7 +348,6 @@ main .item {
     position: relative;
     padding-bottom: 50px;
 }
-
 
 
 main .item img:hover.full-item img:hover {
@@ -391,20 +398,133 @@ main .add-to-cart:hover,
     transform: scale(1.5) translateY(-5px);
 }
 
+.mainAbout {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    background-color: #fae6b1;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(250, 230, 177) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(250, 230, 177) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(250, 230, 177) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(250, 230, 177) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+.mainAbout p {
+    padding-bottom: 10px;
+}
+
 footer {
     font-family: 'Montserrat', cursive;
     text-align: center;
     top: 100px;
 }
+
+
+.buttonBuy {
+    color: gold;
+    border: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    /*color: #FFFFFF;*/
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+
+.buttonBuy:after {
+    background: gold;
+    background-clip: padding-box;
+    background-color: #31525b;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+.buttonBuy:hover:not(:disabled) {
+    filter: brightness(1.1);
+    background: gold;
+    border: 4px solid transparent;
+    padding: 8px 16px;
+    -webkit-filter: brightness(1.1);
+}
+
+.buttonBuy:disabled {
+    cursor: auto;
+}
+
+.buttonBuy:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
 @media screen and (max-width: 768px) {
     ul.nav {
         font-size: 30px;
     }
 }
 
-/* Медіазапит для адаптації розміру шрифту навігаційного меню для екранів менше або рівних 480px */
 @media screen and (max-width: 480px) {
     ul.nav {
         font-size: 20px;
     }
+}
+
+.mainProfile {
+    text-align: center;
+    background-color: rgba(255,255,255,0.13);
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 60px;
+    backdrop-filter: blur(10px);
+    /*border: solid rgba(255,255,255,0.1);*/
+    border-radius: 0px 40px 40px 40px;
+    box-shadow: 0 0 15px rgba(8,7,16,0.6);
+}
+
+.mainProfile input {
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    width: 210px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 8px;
+
+}
+.mainProfile h2 {
+    margin-bottom: 5px;
+}
+.mainProfile .btnSwap {
+    position: absolute;
 }

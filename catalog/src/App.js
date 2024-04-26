@@ -13,6 +13,7 @@ import Home from "./components/Home";
 import {RiShoppingCartFill} from "react-icons/ri";
 import Order from "./components/Order";
 import './index.css';
+import Buy from "./components/Buy";
 
 
 const App = (props) => {
@@ -42,6 +43,7 @@ const App = (props) => {
                 <Route path="/About" element={<About/>}/>
                 <Route path="/News" element={<News/>}/>
                 <Route path="/Profile" element={<Profile/>}/>
+                <Route path="/Buy" element={<Buy/>}/>
             </Routes>
             <Footer/>
         </div>
