@@ -1,4 +1,4 @@
-import '../Buy.css';
+import '../css/Buy.css';
 import React, {Component} from 'react';
 
 class Buy extends Component {

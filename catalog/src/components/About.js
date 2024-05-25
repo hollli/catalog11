@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import '../About.scss';
+import '../css/About.scss';
 const About = () => {
 
     return (

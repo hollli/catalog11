@@ -9,8 +9,24 @@ import Buy from "./Buy";
 
 
 const showNothing = () => {
-    return <p>No orders</p>;
+    return (
+        <div style={{
+            width: '450px',
+            height: '350px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundImage: 'url(https://eadn-wc04-1926448.nxedge.io/cdn/media/catalog/product/cache/ccb305b1061c785de33da9c79e0526ce/m/2/m2-missing-orders-product-image-380x410.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundBlendMode: 'multiply',
+            backgroundColor: '#fae6b1'
+        }}>
+        </div>
+    );
 };
+
+
 
 class Home extends Component {
     constructor(props) {

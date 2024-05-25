@@ -12,7 +12,7 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 import {RiShoppingCartFill} from "react-icons/ri";
 import Order from "./components/Order";
-import './index.css';
+import './css/index.css';
 import Buy from "./components/Buy";
 
 

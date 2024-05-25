@@ -55,12 +55,13 @@ ul.nav li:hover {
 }
 
 .shop-cart-button {
-    float: right;
+    right: 3%;
     cursor: pointer;
     font-size: 50px;
-    top: -60px !important;
+    top: 60px !important;
     transition: color, transform 500ms ease;
-    position: relative;
+    position: fixed;
+    z-index: 11111;
 }
 
 .shop-cart-button:hover,
@@ -68,18 +69,18 @@ ul.nav li:hover {
     color: #ffa101;
     transform: scale(1.5);
 }
-
+.shop-main{
+    padding: 20px;
+}
 .shop-cart {
     position: absolute;
     top: 120px;
     right: 450px;
-    width: 650px;
+    width: 450px;
     background: #b3dee5;
     box-shadow: 4px 5px 15px 7px #31525b;
     z-index: 999999;
-    padding: 20px;
     float: left;
-    margin-bottom: 20px;
     padding-bottom: 0;
     border-radius: 3px;
 
@@ -98,7 +99,7 @@ ul.nav li:hover {
 }
 
 .shop-cart p {
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -160,9 +161,97 @@ main, .categories {
     display: block;
 }
 
-@media (min-width: 768px) {
+/* Медіазапит для екранів шириною не більше 480px */
+@media screen and (max-width: 480px) {
     .wrapper {
-        width: 768px;
+        width: 400px;
+    }
+    a, ul.nav,.shop-cart-button  {
+        font-size: 40px;
+    }
+    ul.nav li {
+        display: inline-block;
+    }
+    main .item {
+        width: 60% !important;
+    }
+    h2, b {
+        font-size: 20px !important;
+    }
+    .mainAbout {
+        margin-top: 15% !important;
+    }
+}
+
+/* Медіазапит для екранів шириною від 481px до 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .wrapper {
+        width: 500px !important;
+    }
+    .mainAbout {
+        margin-top: 10% !important;
+    }
+    ul.nav li {
+    }
+    .shop-cart {
+        top: 120px;
+        right: 50px;
+        width: 450px;
+    }
+    main .item {
+        width: 45% !important;
+    }
+    ul.nav,.shop-cart-button  {
+        font-size: 30px;
+    }
+    .presentation:after {
+        left: 6% !important;
+        font-size: 30px;
+
+    }
+}
+
+/* Медіазапит для екранів шириною від 769px до 992px */
+@media (min-width: 769px) and (max-width: 992px) {
+    .wrapper {
+        width: 800px;
+    }
+
+    .shop-cart {
+        top: 120px;
+        right: 50px;
+        width: 450px;
+    }
+    .presentation:after {
+        left: 23% !important;
+    }
+}
+
+/* Медіазапит для екранів шириною від 993px до 1050px */
+@media (min-width: 993px) and (max-width: 1050px) {
+    .wrapper {
+        width: 950px;
+    }
+    .presentation:after {
+        left: 28% !important;
+    }
+}
+
+/* Медіазапит для екранів шириною від 1051px до 1250px */
+@media (min-width: 1051px) and (max-width: 1250px) {
+    .wrapper {
+        width: 900px;
+    }
+    .presentation:after {
+        left: 27% !important;
+    }
+
+}
+
+/* Медіазапит для екранів шириною більше 1250px */
+@media (min-width: 1251px) {
+    .wrapper {
+        width: 1100px;
     }
 
     .shop-cart {
@@ -172,36 +261,14 @@ main, .categories {
     }
 }
 
-@media (min-width: 992px) {
-    .wrapper {
-        width: 992px;
-    }
-
-    .shop-cart {
-        top: 120px;
-        right: 50px;
-        width: 650px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .wrapper {
-        width: 1200px;
-    }
-
-    .shop-cart {
-        top: 120px;
-        right: 450px;
-        width: 650px;
-    }
-}
 
 .presentation:after {
     content: 'Game News';
     font-family: 'Honk', system-ui;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 550px;
+    left: 32%;
+    text-align: center;
     width: 400px;
     font-weight: 600;
     font-size: 80px;
@@ -220,22 +287,23 @@ main .item img:hover {
     transform: scale(1.1) !important;
 }
 
-.presentation:before {
-    content: 'Free apps';
-    font-family: 'Honk', system-ui;
-    position: absolute;
-    text-align: right;
-    top: 40px;
-    left: 200px;
-    width: 840px;
-    font-weight: 600;
-    font-size: 80px;
-    color: white;
-}
+/*.presentation:before {*/
+/*    content: 'Free apps';*/
+/*    font-family: 'Honk', system-ui;*/
+/*    position: absolute;*/
+/*    text-align: right;*/
+/*    top: 40px;*/
+/*    left: 200px;*/
+/*    width: 840px;*/
+/*    font-weight: 600;*/
+/*    font-size: 80px;*/
+/*    color: white;*/
+/*}*/
 
 
 .categories {
     text-align: center;
+    color: white;
 }
 
 .full-item .categories {
@@ -483,17 +551,7 @@ footer {
     background: none;
 }
 
-@media screen and (max-width: 768px) {
-    ul.nav {
-        font-size: 30px;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    ul.nav {
-        font-size: 20px;
-    }
-}
 
 .mainProfile {
     text-align: center;
