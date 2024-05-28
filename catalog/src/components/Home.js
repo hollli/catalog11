@@ -6,6 +6,7 @@ import Header from "./Header";
 import {RiShoppingCartFill} from "react-icons/ri";
 import Order from "./Order";
 import Buy from "./Buy";
+import {auth} from "../firebase";
 
 
 const showNothing = () => {
@@ -150,11 +151,14 @@ class Home extends Component {
     }
 
     toggleCart() {
-        this.setState(prevState => ({
-            cartOpen: !prevState.cartOpen,
-            showBuy: false
-        }));
-
+        if (!auth.currentUser) {
+            window.location.href = "/profile";
+        }else {
+            this.setState(prevState => ({
+                cartOpen: !prevState.cartOpen,
+                showBuy: false
+            }));
+        }
     }
 
     render() {

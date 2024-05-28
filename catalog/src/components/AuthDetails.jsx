@@ -25,7 +25,7 @@ const AuthDetails = () => {
         <div>
             {authUser ? (
                 <div>
-                    <p>{`Signed in as ${authUser.email}`}</p>
+                    <p>{`Signed in as ${authUser.email.split('@')[0]}`}</p>
                     <button style={{ margin: '10px' }} onClick={userSignOut}>Sign Out</button>
                 </div>
             ) : (
