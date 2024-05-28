@@ -1,2 +1,4 @@
 # Project exclude paths
 /catalog/node_modules/
+# Local Netlify folder
+.netlify
