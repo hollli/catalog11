@@ -23,7 +23,7 @@ const App = (props) => {
             <div>
                 <ul className={'nav'}>
                     <li>
-                        <a href="/Catalog">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="/About">About</a>
