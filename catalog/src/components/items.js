@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from "./item"; // Поміняв "item" на "Item"
+import Item from "./item";
 
 export const Items = (props) => {
     return (
