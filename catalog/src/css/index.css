@@ -166,6 +166,14 @@ main, .categories {
     .wrapper {
         width: 400px;
     }
+    .presentation:after {
+        display: none;
+    }
+    .mainProfile{
+        width: 250px !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
     a, ul.nav,.shop-cart-button  {
         font-size: 40px;
     }
